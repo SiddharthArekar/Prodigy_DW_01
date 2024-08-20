@@ -1,0 +1,92 @@
+/* Basic styling for body and sections */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  scroll-behavior: smooth;
+}
+
+section {
+  padding: 100px 20px;
+  height: 100vh;
+}
+
+
+#home { background: #f3eded; }
+#about { background: #ecf9fa; }
+#services { background: #b6b4b4; }
+#contact { background: #eaeaf0; }
+
+/* Navbar styles */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: transparent;
+  padding: 15px 0;
+  text-align: center;
+  transition: background-color 0.3s ease;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.nav-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.nav-menu li {
+  display: inline;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: #000;
+  font-size: 18px;
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  border-radius: 5px;
+}
+
+.nav-menu a i {
+  font-size: 20px;
+}
+
+/* Hover effect */
+.nav-menu a:hover {
+  color: white;
+  background-color: #333;
+}
+
+/* Navbar scroll effect */
+.scrolled {
+  background-color: #333;
+}
+
+.scrolled .nav-menu a {
+  color: white;
+}
+
+.scrolled .nav-menu a:hover {
+  background-color: white;
+  color: #333;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .nav-menu {
+    flex-direction: column;
+    padding: 10px;
+  }
+  
+  .nav-menu a {
+    width: 100%;
+    text-align: left;
+  }
+}
